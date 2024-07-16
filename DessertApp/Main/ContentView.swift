@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var recipeModel: RecipeModel;
+    
+    
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            NavigatorTabView()
+            
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(RecipeModel())
+
 }

@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct DessertAppApp: App {
+
+    @StateObject var recipeModel = RecipeModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(RecipeModel())
         }
     }
 }
